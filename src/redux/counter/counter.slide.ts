@@ -5,7 +5,7 @@ export interface CounterState {
 }
 
 const initialState = {
-  value: 10,
+  value: 0,
   name: "hùng",
   age: 20,
 };

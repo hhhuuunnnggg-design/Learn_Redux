@@ -15,3 +15,16 @@ react-redux => sử dụng redux với react component
 slide (reducer + action) theo logic thì slide sẽ nằm trong store
 
 //slide quăng vô store
+
+
+
+Tình huống	Diễn giải dễ hiểu
+useEffect(() => {...})	Chạy sau mỗi lần render
+useEffect(() => {...}, [])	Chạy 1 lần duy nhất khi component mount
+useEffect(() => {...}, [value])	Chạy khi value thay đổi
+return () => {...}	Chạy khi component bị huỷ (unmount)
+
+✅ Giải thích ngắn gọn:
+Cú pháp	Nghĩa cụ thể
+useState() hoặc useState(undefined)	users khởi tạo là undefined
+useState([])	users khởi tạo là một mảng rỗng []
