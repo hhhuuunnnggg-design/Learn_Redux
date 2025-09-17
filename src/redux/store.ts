@@ -1,13 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 // import { counterSlice } from "./counter/counter.slide";
 import counterReducer from "./counter/counter.slide";
+import { userSlice } from "./user/user.slide";
 
-//redux store, chứa tất cả các state của ứng dụng
 export const store = configureStore({
   reducer: {
-    //counter: chỉ là cái tên của slide, có thể thay đổi tùy ý
-    //reducer như 1 thằng công nhân
     counter: counterReducer,
+    user: userSlice.reducer,
   },
 });
 

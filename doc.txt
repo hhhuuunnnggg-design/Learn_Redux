@@ -28,3 +28,27 @@ return () => {...}	Chạy khi component bị huỷ (unmount)
 Cú pháp	Nghĩa cụ thể
 useState() hoặc useState(undefined)	users khởi tạo là undefined
 useState([])	users khởi tạo là một mảng rỗng []
+
+
+pending:vừa khởi tạo request
+fullied:lời gọi request thành công
+rejected: có lỗi xảy ra
+
+
+thông báo 
+npm i --save-exact react-toastify@9.1.3
+
+
+
+
+#40. Redux persist
+Why not Local Storage ? Bởi vì khi localStorage thay đổi => component ko re-render
+Bản chất của thư viện Redux Persist:
+Khi user f5 website:
+- Đọc dữ liệu từ local storage
+- Nạp dữ liệu vào redux
+- Cho App render bình thường (sau khi quá trình nạp dữ liệu hoàn tất)
+https://redux-toolkit.js.org/usage/usage-with-typescript#getting-the-state-type
+https://redux-toolkit.js.org/usage/usage-guide#use-with-redux-persist
+https://www.npmjs.com/package/redux-persist
+npm i --save-exact redux-persist@6.0.0
