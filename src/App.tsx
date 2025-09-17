@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import reactLogo from "./assets/react.svg";
+import { increment, reduce } from "./redux/counter/counter.slide";
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import viteLogo from "/vite.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const count = useSelector((state: RootState) => state.counter);
+  const count = useAppSelector((state) => state.counter);
+  const dispatch = useAppDispatch();
   return (
     <>
       <div>
@@ -16,20 +18,15 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div>
+        <h1> My curnet count ={count.value}</h1>
+        <div>
+          <button onClick={() => dispatch(increment())}>Increment +1</button>
+          <button onClick={() => dispatch(reduce())}>Reduce -1</button>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

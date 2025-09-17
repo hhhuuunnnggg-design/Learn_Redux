@@ -1,0 +1,17 @@
+#16. Cài đặt thư viện Redux
+Cài đặt thư viện cần thiết
+
+npm install --save-exact @reduxjs/toolkit@1.9.7 react-redux@8.1.3
+
+@reduxjs/toolkit => đây là thư viện giúp tạo ra "global state" của redux
+react-redux => sử dụng redux với react component
+
+
+#19. Các keywords sử dụng với Redux
+- actions: là 1 biến object
+- dispatch: công cụ thực hiện hành động
+- reducer: công cu update store
+- store (state)
+slide (reducer + action) theo logic thì slide sẽ nằm trong store
+
+//slide quăng vô store
